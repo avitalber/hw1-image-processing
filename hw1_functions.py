@@ -6,10 +6,6 @@ import matplotlib.pyplot as plt
 import math
 
 
-def print_IDs():
-    print("206181554+205815111\n")
-
-
 def contrastEnhance(im, range1):
     # TODO: implement fucntion
     # height, width, number of channels in image
