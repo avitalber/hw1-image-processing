@@ -9,7 +9,7 @@ if __name__ == "__main__":
     darkimg_gray = cv2.cvtColor(darkimg, cv2.COLOR_BGR2GRAY)
 
     print("Start running script  ------------------------------------\n")
-    print_IDs()
+
 
     print("a ------------------------------------\n")
     enhanced_img, a, b = contrastEnhance(darkimg, [0,255])#add parameters
