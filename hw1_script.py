@@ -98,16 +98,10 @@ if __name__ == "__main__":
 
 
     print("e ------------------------------------\n")
-    # working on enhanced image gray and original image
-
-    # TMim, TM = SLTmap(darkimg_gray, enhanced_img_gray)
-    # vec = np.array([range(0, 256)])
-    # d = meanSqrDist(darkimg_gray, np.matmul(sliceMat(darkimg_gray), np.transpose(vec)).reshape(256, 256))  # computationally compare
-
-    TMim, SLTim  = SLTmap(darkimg_gray, enhanced_img_gray)
+   TMim, SLTim  = SLTmap(darkimg_gray, enhanced_img_gray)
     toned_im = np.matmul(sliceMat(darkimg_gray), SLTim).reshape(enhanced_img_gray.shape)
     # calculate with meanSqrDist
-    d = meanSqrDist(toned_im, TMim)
+    d = meanSqrDist(toned_im, enhanced_img_gray)
 
     print("sum of diff between image and slices*[0..255] = {}".format(d))
 
